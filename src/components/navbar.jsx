@@ -1,30 +1,21 @@
-import { Button } from "@/components/ui/button";
-import { Avatar } from "@/components/ui/avatar";
+import { GiNinjaMask } from 'react-icons/gi'; // Ícone que representa um hacker/mascarado
+import { Avatar } from "@/components/ui/avatar"; // Se o Avatar for necessário, mantenha ele
 import { useState } from "react";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <nav className="bg-black p-6 text-green-400 flex justify-between items-center">
-      {/* Substitui o título pela imagem do Avatar */}
-      <Avatar className="bg-green-400 w-12 h-12 rounded-full">
-        {/* Acessa a imagem no diretório public */}
-        <img src="/hacker.png" alt="User Avatar" />
-      </Avatar>
-      
-      <div className="md:hidden">
-        <Button 
-          onClick={() => setIsOpen(!isOpen)} 
-          className="text-green-400 bg-[#000000] border-2 border-[#4ADE80] p-2 rounded-xl"
-        >
-          Menu
-        </Button>
+      {/* Ícone Hacker e Título */}
+      <div className="flex items-center space-x-3 hover:text-green-500 transition duration-300">
+        <GiNinjaMask className="text-4xl text-green-500 hover:text-green-400 transition duration-300" />
+        <h1 className="text-2xl font-bold font-mono tracking-widest hover:text-green-500 transition px-4 duration-300">
+          HackerZone
+        </h1>
       </div>
-      <div className={`md:flex space-x-4 ${isOpen ? 'block' : 'hidden'} md:block`}>
-        <Button variant="ghost" className="text-green-400">Home</Button>
-        <Button variant="ghost" className="text-green-400">About</Button>
-        <Button variant="ghost" className="text-green-400">Contact</Button>
+
+      {/* Avatar à direita, se for necessário */}
+      <div className="w-12 h-12 rounded-full bg-green-400 flex items-center justify-center">
+        <img src="/hacker.png" alt="User Avatar" className="rounded-full" />
       </div>
     </nav>
   );
