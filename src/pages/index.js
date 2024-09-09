@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold">The Spy Hacker🔍</h1>
         <p className="mt-4 text-lg">Descubra se está sendo corno! 🐂</p>
         <div className="mt-6 flex justify-center space-x-4">
-          <Input placeholder="Digite seu email" className="p-4 w-1/3 bg-[#000000] text-[#4ADE80] border-[#4ADE80] rounded-xl" />
+          <Input placeholder="Digite seu email" className="p-3 w-1/3 bg-[#000000] text-[#4ADE80] border-[#4ADE80] rounded-xl" />
           <Button className="bg-green-500 text-black">Saber a verdade! 🐂 </Button>
         </div>
       </header>
